@@ -17,31 +17,10 @@
           </p>
           <h4 class="mt-5">Tech Stacks</h4>
           <p>Below are some of the technologies I use daily:</p>
-          <div class=" mt-3 animate__animated animate__fadeInUp">
-            <div class="col">
-              <ul style="list-style-type: circle">
-                <li>HTML & CSS</li>
-                <li>Node.js</li>
-                <li>PHP</li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul style="list-style-type: circle">
-                <li>JavaScript</li>
-                <li>Git</li>
-                <li>Laravel</li>
-              </ul>
-            </div>
-          </div>
+            <TechStack/>
           <h4 class="mt-5">Achievement</h4>
           <p>This is my Achievement</p>
-          <div class="col">
-            <ul style="list-style-type: circle">
-              <li>HTML & CSS</li>
-              <li>Node.js</li>
-              <li>PHP</li>
-            </ul>
-          </div>
+          <Achievement/>
         </div>
       </div>
       <div class="col-md-6">
@@ -55,43 +34,17 @@
   </div>
 </template>
 <script>
+import TechStack from '../components/TechStack.vue';
+import Achievement from '../components/Achievement.vue';
 export default {
+  components: {
+      TechStack,
+      Achievement
+  },
   data() {
     return {
       startYear: 2021,
       currYear: new Date().getFullYear(),
-      stacks: [
-        {
-          language: "HTML",
-          experience: "2+ Years",
-          variant: "secondary",
-          breif: "lorem...",
-        },
-        {
-          language: "CSS",
-          experience: "2+ Years",
-          variant: "primary",
-          breif: "lorem...",
-        },
-        {
-          language: "Javascript",
-          experience: "2+ Years",
-          variant: "warning",
-          breif: "lorem...",
-        },
-        {
-          language: "VUE.JS",
-          experience: "2+ Month",
-          variant: "success",
-          breif: "lorem...",
-        },
-        {
-          language: "Node.js",
-          experience: "2+ Month",
-          variant: "dark",
-          breif: "lorem...",
-        },
-      ],
     };
   },
   head: {
