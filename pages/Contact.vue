@@ -8,13 +8,13 @@
           If you have any question or just want to say hi, i'll try my best to
           get back to you.
         </p>
-
+        <!-- alert if success -->
         <b-alert show variant="success" v-if="showAlert">
           <strong>All done 🎉</strong><br />
           Thanks for reaching out {{ this.formData.name }}, I'll reply as soon
           as i can.
         </b-alert>
-
+        <!--form data  -->
         <b-form class="mb-5" @submit.prevent="sendMessage">
           <b-form-group id="input-group-1" label="Your Name:">
             <b-form-input
@@ -84,9 +84,6 @@ export default {
           alert("Sending message failed, please try again");
         }
       });
-      // .catch(error => {
-      //   alert("Sending message failed, please try again");
-      // });
     },
   },
   head: {
@@ -97,21 +94,6 @@ export default {
         name: "description",
         content:
           "Do you have any enquires? Send a message now to Muhammad Irsyad Aliyahya",
-      },
-      {
-        hid: "og:title",
-        name: "og:title",
-        content: "Contact 📧 - Muhammad Irsyad Aliyahya",
-      },
-      {
-        property: "og:description",
-        content:
-          "Do you have any enquires? Send a message now to Muhammad Irsyad Aliyahya",
-      },
-      {
-        hid: "og:image",
-        name: "og:image",
-        content: require("@/assets/contact.jpg"),
       },
     ],
   },

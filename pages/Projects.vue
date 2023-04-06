@@ -2,22 +2,21 @@
   <div class="about page animate__animated animate__fadeIn">
     <h2>Recent Project</h2>
     <div class="container">
-      <div class="row" v-for="(project, index) in projects" :key="index">
+      <div class="row" v-for="(data, index) in project" :key="index">
         <div class="col-md-5">
           <img
-            :src="project.image_cover"
-            :alt="project.title"
+            :src=data.image_cover
             class="project-cover"
           />
         </div>
         <div class="col-md-5">
           <h2 class="mt-3" style="text-align: left">
-            {{ project.title }}
+            {{ data.title }}
             <hr class="dope" />
           </h2>
           <b-card class="mt-3 mb-3 text-left text-dark">
-            <p>{{ project.description }}</p>
-            <b-link :href="project.github_url"
+            <p>{{ data.description }}</p>
+            <b-link :href="data.github_url"
             >View source code <GithubIcon style="color: #000"
           /></b-link>
           </b-card>
@@ -27,86 +26,33 @@
   </div>
 </template>
 <script>
+// import icon
 import LinkIcon from "vue-ionicons/dist/md-link.vue";
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
+import axios from 'axios';
 
+// export component icon
 export default {
   components: {
     GithubIcon,
     LinkIcon,
   },
   data() {
+    
     return {
-      projects: [
-        {
-          title: "Laravel Blog",
-          tag: "Progressive Web App",
-          description:
-            "Simple blog using laravel. implement CRUD and clean code",
-          image_cover: require("@/assets/speak.jpg"),
-          github_url: "https://github.com/IRS-dev/laravel-Blog-005",
-        },
-        {
-          title: "Laravel Lumen REST API",
-          tag: "Progressive Web App",
-          description:
-            "lumen simple REST API (CRUD)",
-          image_cover: require("@/assets/illustration.jpg"),
-          github_url: "https://github.com/IRS-dev/lumen-rest-api",
-        },
-        {
-          title: "Laravel Scrap Movie Data",
-          tag: "Progressive Web App",
-          description:
-            "Scrapping data from movie website",
-          image_cover: require("@/assets/qr-1.png"),
-          github_url: "https://github.com/IRS-dev/laravel-scrap-movie",
-        },
-        {
-          title: "Vue fetch API",
-          tag: "Progressive Web App",
-          description:
-            "Scrapping data from movie website",
-          image_cover: require("@/assets/qr-1.png"),
-          github_url: "https://github.com/IRS-dev/vue-fetch-api",
-        },
-      ],
-    };
+      // wkwk: require ("@/assets/laravel.jpg"),
+      // sst: require ("@/assets/vue.png"),
+      project :null,
+    }
   },
-  methods: {
-    isEven(n) {
-      if (n % 2 == 0) {
-        return true;
-      } else {
-        return false;
-      }
+  // fetch data from json 
+  async fetch() {
+        const { data } = await axios.get('http://localhost:3000/data/project.json')
+        this.project = data.data
+        console.log(this.project)
     },
-  },
   head: {
-    title: "Recent Projects 💻 - Muhammad Irsyad Aliyahya ",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "View all the recents open-sourced projects built with ♥ by Asaolu Elijah, open-sourced means this project source code are publicly available for everyone to use or modify.",
-      },
-      {
-        hid: "og:title",
-        name: "og:title",
-        content: "Recent Projects 💻 - Muhammad Irsyad Aliyahya",
-      },
-      {
-        property: "og:description",
-        content:
-          "View all the recents open-sourced projects built with ♥ by Asaolu Elijah, open-sourced means this project source code are publicly available for everyone to use or modify.",
-      },
-      {
-        hid: "og:image",
-        name: "og:image",
-        content: require("@/assets/man-computer.png"),
-      },
-    ],
+    title: "Recent Projects 💻 - Muhammad Irsyad Aliyahya "
   },
 };
 </script>

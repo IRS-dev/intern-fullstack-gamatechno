@@ -38,10 +38,6 @@
           <social-link :to="socialLinks.mail">
             <MailIcon/>
           </social-link>
-
-          <social-link :to="socialLinks.youtube">
-            <YoutubeIcon/>
-          </social-link>
         </div>
       </div>
     </b-col>
@@ -52,26 +48,23 @@
 // import icon
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
 import LinkedinIcon from "vue-ionicons/dist/logo-linkedin.vue";
-import YoutubeIcon from "vue-ionicons/dist/logo-youtube.vue";
 import MailIcon from "vue-ionicons/dist/md-mail.vue";
-
+// export icon
 export default {
   components: {
     GithubIcon,
     LinkedinIcon,
-    YoutubeIcon,
     MailIcon,
   },
 
   data() {
     return {
-      avatar: require("@/assets/person.jpeg"),
+      avatar: require("@/assets/about.jpg"),
       // Sosial Link
       socialLinks: {
         github: "https://github.com/IRS-dev",
         linkedin:"https://www.linkedin.com/in/muhammad-irsyad-aliyahya-698049222/",
         mail: "mailto:irsyadalyahya5@gmail.com",
-        youtube: "",
       },
     };
   },
@@ -84,21 +77,6 @@ export default {
         name: "description",
         content:
           " A student and website development enthusiast passionate about solving problems with tech I am skilled with building beautiful websites and currently i'm exploring vuejs.",
-      },
-      {
-        hid: "og:title",
-        name: "og:title",
-        content: "Portfolio ⚡ - Muhammad Irsyad Aliyahya",
-      },
-      {
-        property: "og:description",
-        content:
-        " A student and website development enthusiast passionate about solving problems with tech I am skilled with building beautiful websites and currently i'm exploring vuejs.",
-      },
-      {
-        hid: "og:image",
-        name: "og:image",
-        content: require("@/assets/coding.png"),
       },
     ],
   },

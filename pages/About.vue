@@ -12,21 +12,19 @@
           </p>
           <p>
             I have <b>{{ currYear - startYear }}+ years experience</b> in
-            crafting beautiful web. Plus I am an agile learner, I learn new cool
-            stuffs everyday.
+            crafting beautiful web. I like to learn new things everyday
           </p>
           <h4 class="mt-5">Tech Stacks</h4>
           <p>Below are some of the technologies I use daily:</p>
             <TechStack/>
-          <h4 class="mt-5">Achievement</h4>
-          <p>This is my Achievement</p>
-          <Achievement/>
+          <h4 class="mt-5">Education</h4>
+          <Education/>
         </div>
       </div>
       <div class="col-md-6">
         <img
-          src="@/assets/working.png"
-          alt="About Illustration"
+          src="@/assets/person.jpeg"
+          alt="person"
           class="abt-img"
         />
       </div>
@@ -34,13 +32,16 @@
   </div>
 </template>
 <script>
+// import component
 import TechStack from '../components/TechStack.vue';
-import Achievement from '../components/Achievement.vue';
+import Education from '../components/Education.vue';
+// export component
 export default {
   components: {
       TechStack,
-      Achievement
+      Education
   },
+  // data 
   data() {
     return {
       startYear: 2021,
@@ -54,7 +55,7 @@ export default {
         hid: "description",
         name: "description",
         // currYear - startYear
-        content: `Hey there 👋 My name is Asaolu Elijah, i am a front-end developer and technical writer currently studying Computer Science at OAUSTECH(Nigeria). i have many years of experience in crafting beautiful web and mobile interfaces. Plus i am an agile learner, i learn new cool stuffs everyday.`,
+        content: `Hey there 👋 My name is Muhammad irsyad Aliyahya,, I am a student and website development enthusiast. Currently studying vuejs and laravel.`,
       },
     ],
   },
