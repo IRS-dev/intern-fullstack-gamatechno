@@ -2,11 +2,8 @@
   <div class="about page animate__animated animate__fadeIn">
     <h2>Recent Project</h2>
     <div class="container">
-      <div class="row" v-for="(data, index) in project" :key="index">
-        <div class="col-md-5">
-          <img :src="data.image_cover" class="project-cover" />
-        </div>
-        <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-6" v-for="(data, index) in project" :key="index">
           <h2 class="mt-3" style="text-align: left">
             {{ data.title }}
             <hr class="dope" />
