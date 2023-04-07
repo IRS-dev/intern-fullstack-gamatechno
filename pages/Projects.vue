@@ -4,10 +4,7 @@
     <div class="container">
       <div class="row" v-for="(data, index) in project" :key="index">
         <div class="col-md-5">
-          <img
-            :src=data.image_cover
-            class="project-cover"
-          />
+          <img :src="data.image_cover" class="project-cover" />
         </div>
         <div class="col-md-5">
           <h2 class="mt-3" style="text-align: left">
@@ -17,8 +14,8 @@
           <b-card class="mt-3 mb-3 text-left text-dark">
             <p>{{ data.description }}</p>
             <b-link :href="data.github_url"
-            >View source code <GithubIcon style="color: #000"
-          /></b-link>
+              >View source code <GithubIcon style="color: #000"
+            /></b-link>
           </b-card>
         </div>
       </div>
@@ -29,7 +26,7 @@
 // import icon
 import LinkIcon from "vue-ionicons/dist/md-link.vue";
 import GithubIcon from "vue-ionicons/dist/logo-github.vue";
-import axios from 'axios';
+import axios from "axios";
 
 // export component icon
 export default {
@@ -38,21 +35,22 @@ export default {
     LinkIcon,
   },
   data() {
-    
     return {
       // wkwk: require ("@/assets/laravel.jpg"),
       // sst: require ("@/assets/vue.png"),
-      project :null,
-    }
+      project: null,
+    };
   },
-  // fetch data from json 
+  // fetch data from json
   async fetch() {
-        const { data } = await axios.get('http://localhost:3000/data/project.json')
-        this.project = data.data
-        console.log(this.project)
-    },
+    const { data } = await axios.get(
+      "https://intern-fullstack-gamatechno.vercel.app/data/project.json"
+    );
+    this.project = data.data;
+    console.log(this.project);
+  },
   head: {
-    title: "Recent Projects 💻 - Muhammad Irsyad Aliyahya "
+    title: "Recent Projects 💻 - Muhammad Irsyad Aliyahya ",
   },
 };
 </script>
