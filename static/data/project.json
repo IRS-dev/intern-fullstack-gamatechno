@@ -3,25 +3,25 @@
         {
             "title": "Laravel Blog",
             "description":"Simple blog using laravel. implement CRUD and clean code",
-            "image_cover": "/_nuxt/assets/laravel.jpg",
+            "image_cover": "/_nuxt/img/laravel.5488e98.jpg",
             "github_url": "https://github.com/IRS-dev/laravel-Blog-005"
         },
         {
             "title": "Laravel Lumen REST API",
             "description": "lumen simple REST API (CRUD)",
-            "image_cover": "/_nuxt/assets/laravel.jpg",
+            "image_cover": "/_nuxt/img/laravel.5488e98.jpg",
             "github_url": "https://github.com/IRS-dev/lumen-rest-api"
         },
         {
             "title": "Laravel Scrap Movie Data",
             "description": "Scrapping data from movie website",
-            "image_cover": "/_nuxt/assets/laravel.jpg",
+            "image_cover": "/_nuxt/img/laravel.5488e98.jpg",
             "github_url": "https://github.com/IRS-dev/laravel-scrap-movie"
         },
         {
             "title": "Vue fetch API",
             "description":"Scrapping data from movie website",
-            "image_cover":"/_nuxt/assets/vue.png",
+            "image_cover":"/_nuxt/img/vue.6fb9982.png",
             "github_url": "https://github.com/IRS-dev/vue-fetch-api"
           }
     ]

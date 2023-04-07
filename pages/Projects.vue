@@ -36,8 +36,8 @@ export default {
   },
   data() {
     return {
-      laravel: require("@/assets/laravel.jpg"),
-      vue: require("@/assets/vue.png"),
+      // laravel: require("@/assets/laravel.jpg"),
+      // vue: require("@/assets/vue.png"),
       project: null,
     };
   },
