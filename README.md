@@ -4,6 +4,7 @@
 - [Bootstrap-vue](https://bootstrap-vue.org/)
 - [Vue-ionicons](https://github.com/mazipan/vue-ionicons)
 - [Animate.css](https://animate.style/)
+- [Nuxt-Axios](https://axios.nuxtjs.org/)
 
 ![Built With NuxtJs](https://d33wubrfki0l68.cloudfront.net/932e75305b64df2a3226eb7307dcdc9e771448d8/37936/logos/built-with-nuxt.svg)
 
