@@ -70,7 +70,7 @@ export default {
   },
 
   head: {
-    title: "Portfolio ⚡ - Muhammad Irsyad Aliyahya",
+    title: "Portofolio ⚡ - Muhammad Irsyad Aliyahya",
     meta: [
       {
         hid: "description",
