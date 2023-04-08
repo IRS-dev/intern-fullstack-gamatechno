@@ -1,8 +1,3 @@
-# Personal Portfolio 👨🏿‍💻
-
-> Check it out [here](https://asaolu.netlify.app)
-
-
 ### Technologies + Tools used 
 
 - [NuxtJs](https://nuxtjs.org/)
