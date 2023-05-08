@@ -41,7 +41,7 @@ export default {
   // fetch data from json
   async fetch() {
     const { data } = await axios.get(
-      "https://intern-fullstack-gamatechno.vercel.app/data/project.json"
+      "https://irsyad-dev.my.id/data/project.json"
     );
     this.project = data.data;
     console.log(this.project);
